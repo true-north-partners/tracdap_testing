@@ -1,0 +1,53 @@
+[project]
+name = "tracdap-testing"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "tracdap-runtime>=0.6.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+
+lint.select = [
+    "E",
+    "F",
+    "I",
+    "B",
+    "C4",
+    "RUF",
+    "D",
+    "N",
+    "C90",
+    "UP",
+    "A",
+    "EM",
+    "ISC",
+    "G",
+    "PIE",
+    "PT",
+    "SIM",
+    "TCH",
+    "PTH",
+    "PD",
+]
+lint.ignore = ["D401", "E501", "PD901", "D206", "ISC001"]
+
+target-version = "py311"
+
+[tool.ruff.lint.per-file-ignores]
+"**/tests/**" = ["D100", "D101", "D102", "D103", "D104"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.uv]
+dev-dependencies = [
+    "ruff>=0.6.4",
+]

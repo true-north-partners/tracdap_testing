@@ -83,4 +83,4 @@ class UsingDataModel(trac.TracModel):
 
 if __name__ == "__main__":
     import tracdap.rt.launch as launch
-    launch.launch_model(UsingDataModel, "config/using_data.yaml", "config/sys_config.yaml")
+    launch.launch_model(UsingDataModel, job_config="test-ext:job_config_A1-6", sys_config="test-ext:sys_config_HuX-7", plugin_package="tracdap_testing.plugins")
